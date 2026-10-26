@@ -1,0 +1,13 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+
+terraform.tfvars
+*.auto.tfvars
+
+.env
+.authorized_key.json
+s3-key.json
