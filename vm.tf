@@ -33,6 +33,9 @@ resource "yandex_compute_instance" "vm" {
   metadata = {
     serial-port-enable = "1"
     ssh-keys           = "ubuntu:${file("/root/.ssh/github_actions_diplom.pub")}"
-    user-data          = file("${path.module}/cloud-init.yaml")
+
+    user-data = templatefile("${path.module}/cloud-init.yaml", {
+      ssh_public_key = trimspace(file("/root/.ssh/github_actions_diplom.pub"))
+    })
   }
 }
