@@ -104,4 +104,4 @@ ssh \
   -o IdentitiesOnly=yes \
   -i "$SSH_KEY" \
   "ubuntu@$VM_IP" \
-  'sudo ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub -E sha256'
+  'sudo ssh-keygen -lf /etc/ssh/ssh_host_ecdsa_key.pub -E sha256'
